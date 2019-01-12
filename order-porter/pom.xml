@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.willowleaf</groupId>
+        <artifactId>order-all</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <groupId>com.willowleaf.order</groupId>
+    <artifactId>order-porter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>order-porter</name>
+    <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>order-porter-core</module>
+        <module>tmall-order-porter</module>
+        <module>jd-order-porter</module>
+        <module>vip-order-porter</module>
+    </modules>
+
+    <properties>
+        <order-porter.version>0.0.1-SNAPSHOT</order-porter.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.willowleaf.order</groupId>
+                <artifactId>order-porter-core</artifactId>
+                <version>${order-porter.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
